@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserLoginViewController">
+            <connections>
+                <outlet property="txtEmail" destination="Hrp-LK-iVG" id="cfW-EU-IBf"/>
+                <outlet property="txtPassword" destination="J1h-9o-UCX" id="Tqk-ck-hsu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewProgress" destination="Ifs-jb-POG" id="78z-O0-Oax"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1p6-R2-Cs8">
+                    <rect key="frame" x="20" y="70" width="280" height="30.5"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hrp-LK-iVG">
+                    <rect key="frame" x="20" y="120.5" width="280" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Vjv-sr-Mb6"/>
+                        <constraint firstAttribute="width" priority="250" constant="400" id="o9p-Uz-G18"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="YdF-61-DlY"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-9o-UCX">
+                    <rect key="frame" x="20" y="190.5" width="280" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" priority="250" constant="400" id="Rcp-kF-Qjv"/>
+                        <constraint firstAttribute="height" constant="50" id="dTf-fd-54m"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="pNF-nh-bQv"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jto-Pt-jSR">
+                    <rect key="frame" x="85" y="280.5" width="150" height="40"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1td-JR-tA5"/>
+                        <constraint firstAttribute="width" constant="150" id="or0-fu-QC5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSubmitCliked:" destination="-1" eventType="touchUpInside" id="S9a-Ya-oom"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-jb-POG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-KR-952">
+                            <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.57585081335616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0Ts-KR-952" firstAttribute="centerY" secondItem="Ifs-jb-POG" secondAttribute="centerY" id="ADQ-Sw-5Sc"/>
+                        <constraint firstItem="0Ts-KR-952" firstAttribute="centerX" secondItem="Ifs-jb-POG" secondAttribute="centerX" id="Bsg-QU-NZr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1p6-R2-Cs8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3bi-fu-kTB"/>
+                <constraint firstAttribute="bottom" secondItem="Ifs-jb-POG" secondAttribute="bottom" id="9qR-5n-oMq"/>
+                <constraint firstItem="Hrp-LK-iVG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bko-fR-bO3"/>
+                <constraint firstItem="Jto-Pt-jSR" firstAttribute="top" secondItem="J1h-9o-UCX" secondAttribute="bottom" constant="40" id="D9b-3A-hRM"/>
+                <constraint firstItem="Jto-Pt-jSR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JWi-mu-2K2"/>
+                <constraint firstAttribute="trailing" secondItem="Ifs-jb-POG" secondAttribute="trailing" id="S5X-5l-Fm0"/>
+                <constraint firstItem="J1h-9o-UCX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U2u-mQ-Qit"/>
+                <constraint firstItem="J1h-9o-UCX" firstAttribute="top" secondItem="Hrp-LK-iVG" secondAttribute="bottom" constant="20" id="Uz0-sX-9YY"/>
+                <constraint firstAttribute="trailing" secondItem="J1h-9o-UCX" secondAttribute="trailing" priority="250" constant="20" id="ZXj-WS-HO5"/>
+                <constraint firstItem="Hrp-LK-iVG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" priority="250" constant="20" id="amv-eE-DsU"/>
+                <constraint firstItem="J1h-9o-UCX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" priority="250" constant="20" id="g4w-4m-eWv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1p6-R2-Cs8" secondAttribute="trailing" constant="20" id="jNN-9K-fEU"/>
+                <constraint firstItem="Ifs-jb-POG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m3N-t5-iBx"/>
+                <constraint firstItem="Ifs-jb-POG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m5c-Xe-Z7a"/>
+                <constraint firstAttribute="trailing" secondItem="Hrp-LK-iVG" secondAttribute="trailing" priority="250" constant="20" id="spT-PT-6fB"/>
+                <constraint firstItem="1p6-R2-Cs8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="tau-ra-QOp"/>
+                <constraint firstItem="Hrp-LK-iVG" firstAttribute="top" secondItem="1p6-R2-Cs8" secondAttribute="bottom" constant="20" id="vyi-5z-C0l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-395.625" y="-82.394366197183103"/>
+        </view>
+    </objects>
+</document>

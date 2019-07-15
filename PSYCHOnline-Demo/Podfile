@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+
+target 'PSYCHOnline-Demo' do
+  use_frameworks!
+
+  # Pods for PSYCHOnline-Demo
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+end

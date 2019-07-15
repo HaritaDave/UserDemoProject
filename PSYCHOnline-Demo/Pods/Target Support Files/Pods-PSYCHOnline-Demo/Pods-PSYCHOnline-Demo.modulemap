@@ -1,0 +1,6 @@
+framework module Pods_PSYCHOnline_Demo {
+  umbrella header "Pods-PSYCHOnline-Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
