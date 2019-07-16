@@ -39,7 +39,7 @@ class UserLoginViewController: BaseViewController, UITextFieldDelegate {
         
         if(!isValidateLogninDetails(email: txtEmail.text ?? "", password: txtPassword.text ?? "")) {
             let alert = UIAlertController(title: "Alert", message: "Invalid Email or Password. Please try again.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else {
@@ -52,28 +52,27 @@ class UserLoginViewController: BaseViewController, UITextFieldDelegate {
     func callSignIn() {
         self.viewProgress.isHidden = false
         
-        ConnectionWrapper.requestPOSTURL(GlobalConstants.kLoginWSURL, params: [GlobalConstants.kUserPassword:txtPassword?.text as AnyObject, GlobalConstants.kUserEmail:txtEmail?.text as AnyObject], headers: nil, success: { (JSON) in
+        UserConnectionClass.PerformUserLogin(email: txtEmail?.text ?? "", password: txtPassword?.text ?? "") { (success) in
             self.viewProgress.isHidden = true
             
             self.txtEmail.text = ""
             self.txtPassword.text = ""
             
-            // Succcess Login go to Users List screen
-            
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(true, forKey: GlobalConstants.kisUserLoggedIn)
-            userDefaults.synchronize() // don't forget this!!!!
-            
-            let userListViewController = UsersListViewController()
-            self.navigationController?.pushViewController(userListViewController, animated: true)
-            
-        })
-        { (Error) in
-            self.viewProgress.isHidden = true
-            
-            let alert = UIAlertController(title: "Alert", message: "Invalid Email or Password. Please try again.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            if (success) {
+                // Succcess Login go to Users List screen
+                
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(true, forKey: GlobalConstants.kisUserLoggedIn)
+                userDefaults.synchronize() // don't forget this!!!!
+                
+                let userListViewController = UsersListViewController()
+                self.navigationController?.pushViewController(userListViewController, animated: true)
+            }
+            else {
+                let alert = UIAlertController(title: "Alert", message: "Invalid Email or Password. Please try again.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -98,7 +97,7 @@ class UserLoginViewController: BaseViewController, UITextFieldDelegate {
         if (!emailTest.evaluate(with: userEmail)) {
             
             let alert = UIAlertController(title: "Alert", message: "Please enter valid Email", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
             return false

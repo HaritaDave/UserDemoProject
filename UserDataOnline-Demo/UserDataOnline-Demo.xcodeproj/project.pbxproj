@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203C5DB922DDC67D00E2176A /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C5DB722DDC67D00E2176A /* UserEditViewController.swift */; };
+		203C5DBA22DDC67D00E2176A /* UserEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 203C5DB822DDC67D00E2176A /* UserEditViewController.xib */; };
+		203C5DBC22DDC84500E2176A /* UserConnectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C5DBB22DDC84500E2176A /* UserConnectionClass.swift */; };
 		2063982122DBBC3C00F06AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2063982022DBBC3C00F06AE3 /* Assets.xcassets */; };
 		2063982422DBBC3C00F06AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063982222DBBC3C00F06AE3 /* LaunchScreen.storyboard */; };
 		20E4A25322DC7F1000B24AD1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4A24922DC7F1000B24AD1 /* BaseViewController.swift */; };
@@ -25,7 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2063981622DBBC0900F06AE3 /* PSYCHOnline-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PSYCHOnline-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		203C5DB722DDC67D00E2176A /* UserEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
+		203C5DB822DDC67D00E2176A /* UserEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserEditViewController.xib; sourceTree = "<group>"; };
+		203C5DBB22DDC84500E2176A /* UserConnectionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserConnectionClass.swift; path = "/Users/haritabhatt/Mine/Projects/UserDemoProject-PSYSHOnline/UserDataOnline-Demo/UserDataOnline-Demo/Classes/Connection/UserConnectionClass.swift"; sourceTree = "<absolute>"; };
+		2063981622DBBC0900F06AE3 /* UserDataOnline-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UserDataOnline-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2063982022DBBC3C00F06AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2063982322DBBC3C00F06AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2063982522DBBC3C00F06AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +67,7 @@
 		2063980D22DBBC0700F06AE3 = {
 			isa = PBXGroup;
 			children = (
-				2063981822DBBC0900F06AE3 /* PSYCHOnline-Demo */,
+				2063981822DBBC0900F06AE3 /* UserDataOnline-Demo */,
 				2063981722DBBC0900F06AE3 /* Products */,
 				426B5EAA40637769367EF13E /* Pods */,
 				705CC9DBD4B8BC6EF63398C9 /* Frameworks */,
@@ -71,12 +77,12 @@
 		2063981722DBBC0900F06AE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2063981622DBBC0900F06AE3 /* PSYCHOnline-Demo.app */,
+				2063981622DBBC0900F06AE3 /* UserDataOnline-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2063981822DBBC0900F06AE3 /* PSYCHOnline-Demo */ = {
+		2063981822DBBC0900F06AE3 /* UserDataOnline-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				20E4A24722DC7F1000B24AD1 /* Classes */,
@@ -84,7 +90,7 @@
 				2063982222DBBC3C00F06AE3 /* LaunchScreen.storyboard */,
 				2063982522DBBC3C00F06AE3 /* Info.plist */,
 			);
-			path = "PSYCHOnline-Demo";
+			path = "UserDataOnline-Demo";
 			sourceTree = "<group>";
 		};
 		20E4A24722DC7F1000B24AD1 /* Classes */ = {
@@ -124,6 +130,7 @@
 				20E4A24F22DC7F1000B24AD1 /* UserLoginViewController.swift */,
 				20E4A25C22DC8D8200B24AD1 /* UsersListViewController.swift */,
 				20E4A26022DC93CD00B24AD1 /* UserDataTableViewCell.swift */,
+				203C5DB722DDC67D00E2176A /* UserEditViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -131,6 +138,7 @@
 		20E4A24D22DC7F1000B24AD1 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
+				203C5DB822DDC67D00E2176A /* UserEditViewController.xib */,
 				20E4A26122DC93CD00B24AD1 /* UserDataTableViewCell.xib */,
 				20E4A25D22DC8D8300B24AD1 /* UsersListViewController.xib */,
 				20E4A24E22DC7F1000B24AD1 /* UserLoginViewController.xib */,
@@ -150,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				20E4A25A22DC7FCE00B24AD1 /* ConnectionWrapper.swift */,
+				203C5DBB22DDC84500E2176A /* UserConnectionClass.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -174,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2063981522DBBC0800F06AE3 /* PSYCHOnline-Demo */ = {
+		2063981522DBBC0800F06AE3 /* UserDataOnline-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2063982822DBBC3D00F06AE3 /* Build configuration list for PBXNativeTarget "PSYCHOnline-Demo" */;
+			buildConfigurationList = 2063982822DBBC3D00F06AE3 /* Build configuration list for PBXNativeTarget "UserDataOnline-Demo" */;
 			buildPhases = (
 				B6E81BB3B09B90AD2A1ABDC9 /* [CP] Check Pods Manifest.lock */,
 				2063981222DBBC0800F06AE3 /* Sources */,
@@ -188,9 +197,9 @@
 			);
 			dependencies = (
 			);
-			name = "PSYCHOnline-Demo";
+			name = "UserDataOnline-Demo";
 			productName = "PSYCHOnline-Demo";
-			productReference = 2063981622DBBC0900F06AE3 /* PSYCHOnline-Demo.app */;
+			productReference = 2063981622DBBC0900F06AE3 /* UserDataOnline-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2063981122DBBC0700F06AE3 /* Build configuration list for PBXProject "PSYCHOnline-Demo" */;
+			buildConfigurationList = 2063981122DBBC0700F06AE3 /* Build configuration list for PBXProject "UserDataOnline-Demo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,7 +230,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2063981522DBBC0800F06AE3 /* PSYCHOnline-Demo */,
+				2063981522DBBC0800F06AE3 /* UserDataOnline-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +245,7 @@
 				20E4A26322DC93CD00B24AD1 /* UserDataTableViewCell.xib in Resources */,
 				20E4A25522DC7F1000B24AD1 /* UserLoginViewController.xib in Resources */,
 				2063982122DBBC3C00F06AE3 /* Assets.xcassets in Resources */,
+				203C5DBA22DDC67D00E2176A /* UserEditViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,10 +303,12 @@
 				20E4A25622DC7F1000B24AD1 /* UserLoginViewController.swift in Sources */,
 				20E4A26222DC93CD00B24AD1 /* UserDataTableViewCell.swift in Sources */,
 				20E4A25322DC7F1000B24AD1 /* BaseViewController.swift in Sources */,
+				203C5DB922DDC67D00E2176A /* UserEditViewController.swift in Sources */,
 				20E4A25E22DC8D8300B24AD1 /* UsersListViewController.swift in Sources */,
 				20E4A25822DC7F1000B24AD1 /* AppDelegate.swift in Sources */,
 				20E4A25722DC7F1000B24AD1 /* Constants.swift in Sources */,
 				20E4A25B22DC7FCE00B24AD1 /* ConnectionWrapper.swift in Sources */,
+				203C5DBC22DDC84500E2176A /* UserConnectionClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,13 +448,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XY456Y6QU9;
-				INFOPLIST_FILE = "PSYCHOnline-Demo/Info.plist";
+				DEVELOPMENT_TEAM = 58B8U5ML4Z;
+				INFOPLIST_FILE = "UserDataOnline-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PSYCH.Online.PSYCHOnline-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = UserData.Online.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,13 +467,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XY456Y6QU9;
-				INFOPLIST_FILE = "PSYCHOnline-Demo/Info.plist";
+				DEVELOPMENT_TEAM = 58B8U5ML4Z;
+				INFOPLIST_FILE = "UserDataOnline-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PSYCH.Online.PSYCHOnline-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = UserData.Online.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2063981122DBBC0700F06AE3 /* Build configuration list for PBXProject "PSYCHOnline-Demo" */ = {
+		2063981122DBBC0700F06AE3 /* Build configuration list for PBXProject "UserDataOnline-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2063982622DBBC3C00F06AE3 /* Debug */,
@@ -480,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2063982822DBBC3D00F06AE3 /* Build configuration list for PBXNativeTarget "PSYCHOnline-Demo" */ = {
+		2063982822DBBC3D00F06AE3 /* Build configuration list for PBXNativeTarget "UserDataOnline-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2063982922DBBC3D00F06AE3 /* Debug */,

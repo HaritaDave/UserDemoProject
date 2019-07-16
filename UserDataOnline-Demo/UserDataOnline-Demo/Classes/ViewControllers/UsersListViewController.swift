@@ -17,7 +17,7 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tblUserList.register(UINib(nibName: "UserDataTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         // Do any additional setup after loading the view.
@@ -25,48 +25,35 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.setNavigationBar()
+        self.loadUserData()
+    }
+    
+    //MARK: Custom Method
+    func setNavigationBar()  {
         self.navigationController?.navigationBar.isHidden = false
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LogOut", style: UIBarButtonItem.Style.done, target: self, action: #selector(btnSignoutCliked))
         navigationItem.title = "Users List"
-        
-        self.loadUserData()
     }
     
     //MARK: Load User List Method
+    
     func loadUserData() {
         self.viewProgress.isHidden = false
         
-        ConnectionWrapper.requestGETURL(GlobalConstants.kUserDetailsWSURL, success: { (JSON) in
+        UserConnectionClass.PerformGetUserDetails { (success, arrData) in
             self.viewProgress.isHidden = true
-            
-            if let resData = JSON["data"].arrayObject {
-                let arrData = resData as! [[String:AnyObject]]
-                self.prepareUserData(arrData: arrData )
-            }
-            else {
-                 self.arrUserList = [UserModel]()
+            self.arrUserList.removeAll()
+            if (success) {
+                self.arrUserList = arrData
             }
             
             self.tblUserList.reloadData()
-        }) { (Error) in
-            self.viewProgress.isHidden = true
         }
     }
     
-    func prepareUserData(arrData: [[String:AnyObject]]) {
-        for var dict in arrData {
-            let userDetail = UserModel.init()
-            
-            userDetail.first_name = dict[GlobalConstants.kUserFName] as! String 
-            userDetail.last_name = dict[GlobalConstants.kUserLName] as! String 
-            userDetail.email = dict[GlobalConstants.kUserEmail] as! String 
-            userDetail.avatar = dict[GlobalConstants.kUserAvatar] as! String 
-            
-            self.arrUserList.append(userDetail)
-        }
-    }
+    
     
     //MARK: Button Methods
     @objc func btnSignoutCliked() {
@@ -99,5 +86,13 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
         cell.imgAvatar.imageFromServerURL(userDetail.avatar, placeHolder: nil)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userDetail = self.arrUserList[indexPath.row] as UserModel
+        
+        let userEditViewController = UserEditViewController()
+        userEditViewController.UserDetail = userDetail
+        self.navigationController?.pushViewController(userEditViewController, animated: true)
     }
 }

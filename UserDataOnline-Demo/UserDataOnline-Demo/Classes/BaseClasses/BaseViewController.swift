@@ -26,7 +26,9 @@ class BaseViewController: UIViewController {
         
         // Tap geture to remove key board
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        
+        //Remove tap geture on table click event
+        tap.cancelsTouchesInView = false
+
         //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
         // tap.cancelsTouchesInView = false
         

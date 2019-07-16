@@ -21,4 +21,7 @@ struct GlobalConstants {
     static let kUserFName = "first_name"
     static let kUserLName = "last_name"
     static let kUserAvatar = "avatar"
+    
+    static let kUserName = "name"
+    static let kUserJob = "job"
 }
