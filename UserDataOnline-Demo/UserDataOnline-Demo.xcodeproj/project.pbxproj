@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2029CE4F22E06FDA00B73B09 /* UserConnectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029CE4E22E06FDA00B73B09 /* UserConnectionClass.swift */; };
 		203C5DB922DDC67D00E2176A /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C5DB722DDC67D00E2176A /* UserEditViewController.swift */; };
 		203C5DBA22DDC67D00E2176A /* UserEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 203C5DB822DDC67D00E2176A /* UserEditViewController.xib */; };
-		203C5DBC22DDC84500E2176A /* UserConnectionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C5DBB22DDC84500E2176A /* UserConnectionClass.swift */; };
 		2063982122DBBC3C00F06AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2063982022DBBC3C00F06AE3 /* Assets.xcassets */; };
 		2063982422DBBC3C00F06AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063982222DBBC3C00F06AE3 /* LaunchScreen.storyboard */; };
 		20E4A25322DC7F1000B24AD1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4A24922DC7F1000B24AD1 /* BaseViewController.swift */; };
@@ -28,9 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2029CE4E22E06FDA00B73B09 /* UserConnectionClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConnectionClass.swift; sourceTree = "<group>"; };
 		203C5DB722DDC67D00E2176A /* UserEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
 		203C5DB822DDC67D00E2176A /* UserEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserEditViewController.xib; sourceTree = "<group>"; };
-		203C5DBB22DDC84500E2176A /* UserConnectionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserConnectionClass.swift; path = "/Users/haritabhatt/Mine/Projects/UserDemoProject-PSYSHOnline/UserDataOnline-Demo/UserDataOnline-Demo/Classes/Connection/UserConnectionClass.swift"; sourceTree = "<absolute>"; };
 		2063981622DBBC0900F06AE3 /* UserDataOnline-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UserDataOnline-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2063982022DBBC3C00F06AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2063982322DBBC3C00F06AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 		20E4A25922DC7FB000B24AD1 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
+				2029CE4E22E06FDA00B73B09 /* UserConnectionClass.swift */,
 				20E4A25A22DC7FCE00B24AD1 /* ConnectionWrapper.swift */,
-				203C5DBB22DDC84500E2176A /* UserConnectionClass.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				20E4A25822DC7F1000B24AD1 /* AppDelegate.swift in Sources */,
 				20E4A25722DC7F1000B24AD1 /* Constants.swift in Sources */,
 				20E4A25B22DC7FCE00B24AD1 /* ConnectionWrapper.swift in Sources */,
-				203C5DBC22DDC84500E2176A /* UserConnectionClass.swift in Sources */,
+				2029CE4F22E06FDA00B73B09 /* UserConnectionClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
